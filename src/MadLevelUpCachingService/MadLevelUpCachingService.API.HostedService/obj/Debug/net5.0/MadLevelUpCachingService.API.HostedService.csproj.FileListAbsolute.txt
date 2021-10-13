@@ -1,0 +1,12 @@
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\bin\Debug\net5.0\MadLevelUpCachingService.API.HostedService.deps.json
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\bin\Debug\net5.0\MadLevelUpCachingService.API.HostedService.dll
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\bin\Debug\net5.0\ref\MadLevelUpCachingService.API.HostedService.dll
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\bin\Debug\net5.0\MadLevelUpCachingService.API.HostedService.pdb
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.csproj.AssemblyReference.cache
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.AssemblyInfoInputs.cache
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.AssemblyInfo.cs
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.csproj.CoreCompileInputs.cache
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.dll
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\ref\MadLevelUpCachingService.API.HostedService.dll
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.pdb

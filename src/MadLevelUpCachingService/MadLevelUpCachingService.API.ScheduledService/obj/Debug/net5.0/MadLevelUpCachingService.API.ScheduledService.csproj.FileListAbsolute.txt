@@ -1,0 +1,12 @@
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\obj\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\obj\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.AssemblyInfoInputs.cache
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\obj\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.AssemblyInfo.cs
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\obj\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.csproj.CoreCompileInputs.cache
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\bin\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.deps.json
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\bin\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.dll
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\bin\Debug\net5.0\ref\MadLevelUpCachingService.API.ScheduledService.dll
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\bin\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.pdb
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\obj\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.dll
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\obj\Debug\net5.0\ref\MadLevelUpCachingService.API.ScheduledService.dll
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\obj\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.pdb
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.ScheduledService\obj\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.csproj.AssemblyReference.cache
