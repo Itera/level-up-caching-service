@@ -10,3 +10,6 @@ C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachi
 C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.dll
 C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\ref\MadLevelUpCachingService.API.HostedService.dll
 C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.pdb
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\bin\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.dll
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\bin\Debug\net5.0\MadLevelUpCachingService.API.ScheduledService.pdb
+C:\projects\mad-levelup-caching-svc\src\MadLevelUpCachingService\MadLevelUpCachingService.API.HostedService\obj\Debug\net5.0\MadLevelUpCachingService.API.HostedService.csproj.CopyComplete

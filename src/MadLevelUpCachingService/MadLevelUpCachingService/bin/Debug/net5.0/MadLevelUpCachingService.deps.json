@@ -1527,6 +1527,7 @@
       },
       "MadLevelUpCachingService.API.HostedService/1.0.0": {
         "dependencies": {
+          "MadLevelUpCachingService.API.ScheduledService": "1.0.0",
           "Microsoft.AspNet.Mvc": "5.2.7",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "Microsoft.Extensions.Hosting.Abstractions": "5.0.0",

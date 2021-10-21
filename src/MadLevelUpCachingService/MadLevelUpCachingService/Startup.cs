@@ -48,7 +48,6 @@ namespace MadLevelUpCachingService
             });
 
             services.AddHostedService<Worker>();
-            services.AddHostedService<Service>();
 
             services.AddControllers();
             services.AddSwaggerGen(static c =>
