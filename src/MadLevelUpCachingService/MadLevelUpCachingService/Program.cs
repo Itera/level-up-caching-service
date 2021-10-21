@@ -18,10 +18,14 @@ namespace MadLevelUpCachingService
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    config.AddEnvironmentVariables(prefix: "MadLearning_");
+                    config.AddJsonFile($"secrets/appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: true);
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.UseUrls("http://localhost:9813/");
                 });
     }
 }

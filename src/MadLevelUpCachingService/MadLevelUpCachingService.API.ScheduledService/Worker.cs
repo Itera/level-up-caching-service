@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace MadLevelUpCachingService.API.ScheduledService
 {
-    public class Worker : BackgroundService
+    public class Worker : BackgroundService, IHostedService
     {
         private readonly ILogger<Worker> _logger;
         private readonly IConfiguration _configuration;
@@ -27,16 +27,18 @@ namespace MadLevelUpCachingService.API.ScheduledService
             _projectId = "y2nkns2q";
             _dataset = "production";
         }
+
+
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            int overrideWaitInterval = -1;
+            int overrideWaitIntervalInMinutes = -1;
             while (!stoppingToken.IsCancellationRequested)
             {
-                var minuteInterval = _configuration.GetValue<int>("MinuteInterval");
+                int minuteInterval = _configuration.GetValue<int>("MinuteInterval");
                 await Task.Delay(
-                    overrideWaitInterval >= 0 ? 
-                      TimeSpan.FromMinutes(minuteInterval) 
-                    : TimeSpan.FromMinutes(overrideWaitInterval), 
+                    overrideWaitIntervalInMinutes < 0 ?
+                      minuteInterval * 1000 * 60
+                    : overrideWaitIntervalInMinutes * 1000 * 60,
                     stoppingToken);
 
                 using var client = new HttpClient();
@@ -46,7 +48,7 @@ namespace MadLevelUpCachingService.API.ScheduledService
                 if(response.IsSuccessStatusCode)
                 {
                     _logger.LogInformation($"Successfully retrieved data for project: {_projectId}, dataset: {_dataset}.");
-                    overrideWaitInterval = -1;
+                    overrideWaitIntervalInMinutes = -1;
 
                     _cacheRaw = await response.Content.ReadAsStringAsync();
                     _cache = _cacheRaw.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries).ToList();
@@ -54,7 +56,7 @@ namespace MadLevelUpCachingService.API.ScheduledService
                 else
                 {
                     _logger.LogInformation($"Failed to retrieve data for project: {_projectId}, dataset: {_dataset}.");
-                    overrideWaitInterval = 5;
+                    overrideWaitIntervalInMinutes = 5;
                 }
             }
         }
