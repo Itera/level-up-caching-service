@@ -1,19 +1,15 @@
 ﻿using MadLevelUpCachingService.API.ScheduledService;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MadLevelUpCachingService.API.HostedService.Controllers
 {
-    public class EventsController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class CacheController : ControllerBase
     {
         // 
         // GET: /Events/
-
+        [HttpGet()]
         public string Index()
         {
             return Worker.getCache();
@@ -21,6 +17,7 @@ namespace MadLevelUpCachingService.API.HostedService.Controllers
 
         // 
         // GET: /Events/
+        [HttpGet("{id}")]
         public ActionResult Index(string id)
         {
             return this.Content(Worker.getCacheEntry(id), "application/json");

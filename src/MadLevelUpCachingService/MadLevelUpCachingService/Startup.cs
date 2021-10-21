@@ -26,19 +26,21 @@ namespace MadLevelUpCachingService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            /*
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(this.Configuration, "AzureAd")
                 .EnableTokenAcquisitionToCallDownstreamApi()
-                .AddMicrosoftGraph(this.Configuration.GetSection("GraphApi"))
+                //.AddMicrosoftGraph(this.Configuration.GetSection("GraphApi"))
                 .AddInMemoryTokenCaches();
+            */
 
             services.AddLogging();
 
             services.AddCors(options =>
             {
                 var origins = Environment.IsDevelopment() ?
-                    new[] { "http://localhost:3001", "https://localhost:3001" } :
-                    new[] { "https://learning.mad.itera.no" };
+                    new[] { "http://localhost:5003", "https://localhost:5004" } :
+                    new[] { "https://learning-cache.mad.itera.no" };
 
                 options.AddDefaultPolicy(
                     builder => builder
@@ -49,6 +51,7 @@ namespace MadLevelUpCachingService
 
             services.AddHostedService<Worker>();
 
+            services.AddMvc();
             services.AddControllers();
             services.AddSwaggerGen(static c =>
             {
@@ -79,8 +82,10 @@ namespace MadLevelUpCachingService
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseCors();
+            /*
             app.UseAuthentication();
             app.UseAuthorization();
+            */
             
             app.UseEndpoints(endpoints =>
             {

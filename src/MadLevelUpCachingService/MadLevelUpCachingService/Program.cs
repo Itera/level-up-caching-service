@@ -26,6 +26,7 @@ namespace MadLevelUpCachingService
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    //webBuilder.UseUrls(new string[] { "https://localhost:5004/", "http://localhost:5003/"});
                 });
     }
 }
