@@ -34,13 +34,6 @@ namespace MadLevelUpCachingService.API.ScheduledService
             int overrideWaitIntervalInMinutes = -1;
             while (!stoppingToken.IsCancellationRequested)
             {
-                int minuteInterval = _configuration.GetValue<int>("MinuteInterval");
-                await Task.Delay(
-                    overrideWaitIntervalInMinutes < 0 ?
-                      minuteInterval * 1000 * 60
-                    : overrideWaitIntervalInMinutes * 1000 * 60,
-                    stoppingToken);
-
                 using var client = new HttpClient();
 
                 var response = await client.GetAsync($"https://{_projectId}.api.sanity.io/v2021-06-07/data/export/{_dataset}");
@@ -51,13 +44,21 @@ namespace MadLevelUpCachingService.API.ScheduledService
                     overrideWaitIntervalInMinutes = -1;
 
                     _cacheRaw = await response.Content.ReadAsStringAsync();
-                    _cache = _cacheRaw.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries).ToList();
+                    char[] delims = new[] { '\r', '\n' };
+                    _cache = _cacheRaw.Split(delims, StringSplitOptions.RemoveEmptyEntries).ToList();
                 }
                 else
                 {
                     _logger.LogInformation($"Failed to retrieve data for project: {_projectId}, dataset: {_dataset}.");
                     overrideWaitIntervalInMinutes = 5;
                 }
+
+                int minuteInterval = _configuration.GetValue<int>("MinuteInterval");
+                await Task.Delay(
+                    overrideWaitIntervalInMinutes < 0 ?
+                      minuteInterval * 1000 * 60
+                    : overrideWaitIntervalInMinutes * 1000 * 60,
+                    stoppingToken);
             }
         }
 
@@ -69,7 +70,7 @@ namespace MadLevelUpCachingService.API.ScheduledService
         public static string getCacheEntry(string id)
         {
             var metaData = GetMetaData(_cache);
-            var matches = metaData.Where(x => x.Id == id);
+            var matches = metaData.Where(x => x.Id == id).ToList();
             if (matches.Any())
             {
                 return _cache[matches.First().LineNr];
@@ -93,6 +94,7 @@ namespace MadLevelUpCachingService.API.ScheduledService
         public static MetaData GetMetaData(string str, int lineNr)
         {
             var meta = new MetaData();
+            meta.LineNr = lineNr;
             string currStr = "";
             string name = "";
 
