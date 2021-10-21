@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+cieuvwy7hGd0KP7tcd2xjT93YrEToOfuNnTsan2P63npJkjZ9SsxUSZ8H3mArIE+iqHFzE5/tiLBfzgFI7vpg==",
+  "dgSpecHash": "IvJYd1ceiBFqejt+4dCc/Plw0krCW/dpfaHkGX7YoGTRBl7+TcpjaMyfHzeJknVCG8Qv+JR78BWqJ6RwsmcsLA==",
   "success": true,
   "projectFilePath": "C:\\projects\\mad-levelup-caching-svc\\src\\MadLevelUpCachingService\\MadLevelUpCachingService.API.ScheduledService\\MadLevelUpCachingService.API.ScheduledService.csproj",
   "expectedPackageFiles": [

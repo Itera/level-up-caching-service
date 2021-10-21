@@ -1,6 +1,8 @@
-﻿using System;
+﻿using MadLevelUpCachingService.API.ScheduledService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -14,30 +16,14 @@ namespace MadLevelUpCachingService.API.HostedService.Controllers
 
         public string Index()
         {
-            return "TODO: Get data from CMS";
+            return Worker.getCache();
         }
 
         // 
         // GET: /Events/
-        public string Index(string id)
+        public ActionResult Index(string id)
         {
-            return "TODO: Get data from CMS";
-        }
-
-        // 
-        // POST: /Events/
-        [HttpPost]
-        public string Post(string id)
-        {
-            return "TODO: Get data from CMS";
-        }
-
-        // 
-        // PUT: /Events/
-        [HttpPut]
-        public string Put(string id)
-        {
-            return "TODO: Get data from CMS";
+            return this.Content(Worker.getCacheEntry(id), "application/json");
         }
     }
 }

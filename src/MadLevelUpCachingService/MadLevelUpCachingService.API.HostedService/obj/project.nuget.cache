@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lRUYeDpACSIo/cRsckHRqZtpnkq4gU2ZmlZKPQuomO/fAuBt/tMSnH3MAIUQ8dic8JXN/k09FsPo5IZzdAxXhA==",
+  "dgSpecHash": "FWHKsW2gmTSwDNyT6E5q3b5tjmigbpWOnjTgjIVSH7S1a/c8O5czHJjcXR4+9TPb4+aPqWIqW4DZW4/DaZmO3A==",
   "success": true,
   "projectFilePath": "C:\\projects\\mad-levelup-caching-svc\\src\\MadLevelUpCachingService\\MadLevelUpCachingService.API.HostedService\\MadLevelUpCachingService.API.HostedService.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\andreas.johnsen.lind\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",
     "C:\\Users\\andreas.johnsen.lind\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.7\\microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
     "C:\\Users\\andreas.johnsen.lind\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\andreas.johnsen.lind\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0\\microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",
     "C:\\Users\\andreas.johnsen.lind\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\andreas.johnsen.lind\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\andreas.johnsen.lind\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\5.0.0\\microsoft.extensions.hosting.abstractions.5.0.0.nupkg.sha512",
