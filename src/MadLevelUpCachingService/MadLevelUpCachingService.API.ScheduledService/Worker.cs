@@ -13,19 +13,18 @@ namespace MadLevelUpCachingService.API.ScheduledService
     public class Worker : BackgroundService, IHostedService
     {
         private readonly ILogger<Worker> _logger;
-        private readonly IConfiguration _configuration;
         private readonly string _projectId;
         private readonly string _dataset;
+        private readonly int _minuteInterval;
         private static string _cacheRaw;
         private static List<string> _cache;
-        //private static Node _treeCache;
 
         public Worker(ILogger<Worker> logger, IConfiguration configuration)
         {
             _logger = logger;
-            _configuration = configuration;
-            _projectId = "y2nkns2q";
-            _dataset = "production";
+            _projectId = configuration.GetValue<string>("ProjectId");
+            _dataset = configuration.GetValue<string>("DataSet");
+            _minuteInterval = configuration.GetValue<int>("MinuteInterval");
         }
 
 
@@ -53,10 +52,9 @@ namespace MadLevelUpCachingService.API.ScheduledService
                     overrideWaitIntervalInMinutes = 5;
                 }
 
-                int minuteInterval = _configuration.GetValue<int>("MinuteInterval");
                 await Task.Delay(
                     overrideWaitIntervalInMinutes < 0 ?
-                      minuteInterval * 1000 * 60
+                      _minuteInterval * 1000 * 60
                     : overrideWaitIntervalInMinutes * 1000 * 60,
                     stoppingToken);
             }
@@ -164,79 +162,5 @@ namespace MadLevelUpCachingService.API.ScheduledService
             public string UpdatedAt { get; set; } = null;
             public int LineNr { get; set; }
         }
-
-        /*
-        public static List<Node> SplitStringByCurlyNested(List<string> strings)
-        {
-            var ret = new List<Node>();
-            foreach (var str in strings)
-            {
-                ret.Add(SplitStringByCurlyNested(str));
-            }
-            return ret;
-        }
-
-        public static Node SplitStringByCurlyNested(string str)
-        {
-            Node ret = null;
-            Node cursor = null;
-            string currStr = "";
-            string name = "";
-
-            bool strStarted = false;
-            foreach (var c in str.ToCharArray())
-            {
-                if (c == '{')
-                {
-                }
-                else if (c == '}')
-                {
-                }
-                else if (c == '"')
-                {
-                    strStarted = !strStarted;
-                    if (strStarted)
-                    {
-                        currStr = "";
-                    }
-                    else
-                    {
-                        if(name == "")
-                        {
-                            name = currStr;
-                        }
-                        else
-                        {
-                            if(ret == null)
-                            {
-                                cursor = new Node(name, currStr);
-                                ret = cursor;
-                            }
-                            else
-                            {
-                                cursor = new Node(name, currStr, cursor);
-                            }
-
-                            name = "";
-                        }
-                    }
-                }
-                else if (!strStarted && c == '[')
-                {
-                    ;
-                }
-                else if (!strStarted)
-                {
-                    // Do nothing inbetween strings and lists.
-                }
-                else
-                {
-
-                }
-            }
-
-            return ret;
-        }
-        */
     }
 }
